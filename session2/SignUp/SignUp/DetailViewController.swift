@@ -56,10 +56,10 @@ class DetailViewController: UIViewController {
     let datePicker:UIDatePicker = {
         let dp = UIDatePicker()
         dp.timeZone = NSTimeZone.local
-        dp.preferredDatePickerStyle = .wheels
-        dp.datePickerMode = .date
-        dp.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
-        dp.addTarget(self, action: #selector(checkState), for: .valueChanged)
+        dp.preferredDatePickerStyle = .wheels //데이트피커를 그냥 선언하면, 휠모양이 아닌 다른 UI가 나온다.
+        dp.datePickerMode = .date //시간 날짜 등을 설정할 수 있는데 우리는 날짜만 원한다.
+        dp.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged) // 라벨 바꾸기
+        dp.addTarget(self, action: #selector(checkState), for: .valueChanged) //값 체크
         return dp
     }()
     @objc func datePickerValueChanged(_ sender: UIDatePicker) {

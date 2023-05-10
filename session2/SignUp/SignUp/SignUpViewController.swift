@@ -10,13 +10,21 @@ import SnapKit
 class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     
-
+    var imageFlag = 0
+    //입력값 확인
+    @objc func checkUserInfo() {
+        if pwTextFiled.text == pwCheckTextFiled.text && idTextFiled.text != "" && introduceTextField.text != "" && imageFlag == 1{
+            nextButton.isEnabled = true
+        }else { nextButton.isEnabled = false}
+    }
     
+    // MARK: - 텍스트필드
     let idTextFiled:UITextField = {
         let tf = UITextField()
         tf.borderStyle = .roundedRect
         tf.placeholder = "아이디를 입력하세요"
         tf.keyboardType = .emailAddress
+        tf.addTarget(self, action: #selector(checkUserInfo), for: .valueChanged)
         return tf
     }()
     
@@ -40,13 +48,8 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         return tf
     }()
     
-    @objc func checkPassword() {
-        print("값 바뀜")
-        if pwTextFiled.text == pwCheckTextFiled.text {
-            nextButton.isEnabled = true
-            print("gkdl")
-        }else { nextButton.isEnabled = false}
-    }
+    
+    
     
     lazy var textFiledStackView: UIStackView = {
         let st = UIStackView(arrangedSubviews: [
@@ -76,12 +79,14 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) { //ImgaePickerDelegate
         if let tempImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             profileImage.setBackgroundImage(tempImage, for: .normal)
+            profileImage.contentMode = .scaleAspectFit //크기를 원본 비율에 맞춰서
+            imageFlag = 1
         }
         self.dismiss(animated: true, completion: {
+            
             print("이미지 픽 끝남")
         })
     }
@@ -116,7 +121,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         return bt
     }()
     
-    //함수
+    //이전화면을 돌아가기
     @objc func popScreen() {
         navigationController?.popViewController(animated: true)
     }
@@ -191,12 +196,22 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         self.navigationItem.setHidesBackButton(true, animated:true)
         view.backgroundColor = .white
+        
+        //setDelegate 딜리게이트 설정으로 다양한 메서드 실행 가능
         pwTextFiled.delegate = self
         pwCheckTextFiled.delegate = self
+        introduceTextField.delegate = self
         setConstraints()
-
+        
+        let ges:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.tabView(_:)))
+        self.view.addGestureRecognizer(ges)
         // Do any additional setup after loading the view.
     }
+    @IBAction func tabView(_ sender:UITapGestureRecognizer) {
+                    //에디팅이 끝나면 키보드를 내림
+            self.view.endEditing(true)
+    }
+
     
     
     /*
@@ -211,10 +226,11 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
 
 }
 
-extension SignUpViewController {
+extension SignUpViewController:UITextViewDelegate {
+    func textViewDidEndEditing(_ textView: UITextView) {
+        checkUserInfo()
+    }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if pwTextFiled.text == pwCheckTextFiled.text {
-            nextButton.isEnabled = true
-        }else {nextButton.isEnabled = false}
+        checkUserInfo()
     }
 }
