@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sve-4L-gVm">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+>>>>>>> master
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -17,10 +21,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="B4b-O2-5g6">
+<<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="9Xs-cY-tKr">
                                     <rect key="frame" x="0.0" y="160.66666603088379" width="393" height="44"/>
+=======
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="9Xs-cY-tKr">
+                                    <rect key="frame" x="0.0" y="116.99999809265137" width="393" height="44"/>
+>>>>>>> master
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Add data"/>
@@ -45,6 +56,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+<<<<<<< HEAD
                                         <connections>
                                             <segue destination="U7I-in-2MZ" kind="show" id="nUd-in-THJ"/>
                                         </connections>
@@ -86,6 +98,8 @@
                                             <outlet property="leftLabel" destination="FLd-LW-2oJ" id="cJL-eS-yoj"/>
                                             <outlet property="rightLabel" destination="D5x-gr-y2B" id="6zl-mt-2ET"/>
                                         </connections>
+=======
+>>>>>>> master
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -103,13 +117,17 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B4b-O2-5g6" secondAttribute="trailing" id="ztb-TH-094"/>
                         </constraints>
                     </view>
+<<<<<<< HEAD
                     <navigationItem key="navigationItem" id="su0-qA-RE7"/>
+=======
+>>>>>>> master
                     <connections>
                         <outlet property="tableView" destination="B4b-O2-5g6" id="2mr-hZ-EX7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="1057.2519083969464" y="-27.464788732394368"/>
         </scene>
         <!--Second View Controller-->
@@ -157,6 +175,9 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nh5-rj-bJq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+=======
+            <point key="canvasLocation" x="132" y="-27"/>
+>>>>>>> master
         </scene>
     </scenes>
     <resources>

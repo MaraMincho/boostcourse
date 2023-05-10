@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		E863CBA82A0B99C30005B77F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863CBA72A0B99C30005B77F /* CustomTableViewCell.swift */; };
 		E863CBAA2A0BBC860005B77F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863CBA92A0BBC860005B77F /* SecondViewController.swift */; };
+=======
+>>>>>>> master
 		E8E1D9B12A0B8B340014CBE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1D9B02A0B8B340014CBE7 /* AppDelegate.swift */; };
 		E8E1D9B32A0B8B340014CBE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1D9B22A0B8B340014CBE7 /* SceneDelegate.swift */; };
 		E8E1D9B52A0B8B340014CBE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1D9B42A0B8B340014CBE7 /* ViewController.swift */; };
@@ -18,8 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
 		E863CBA72A0B99C30005B77F /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		E863CBA92A0BBC860005B77F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+=======
+>>>>>>> master
 		E8E1D9AD2A0B8B340014CBE7 /* SimpleTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E1D9B02A0B8B340014CBE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8E1D9B22A0B8B340014CBE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,11 +70,17 @@
 				E8E1D9B22A0B8B340014CBE7 /* SceneDelegate.swift */,
 				E8E1D9B42A0B8B340014CBE7 /* ViewController.swift */,
 				E8E1D9B62A0B8B340014CBE7 /* Main.storyboard */,
+<<<<<<< HEAD
 				E863CBA92A0BBC860005B77F /* SecondViewController.swift */,
 				E8E1D9B92A0B8B350014CBE7 /* Assets.xcassets */,
 				E8E1D9BB2A0B8B350014CBE7 /* LaunchScreen.storyboard */,
 				E8E1D9BE2A0B8B350014CBE7 /* Info.plist */,
 				E863CBA72A0B99C30005B77F /* CustomTableViewCell.swift */,
+=======
+				E8E1D9B92A0B8B350014CBE7 /* Assets.xcassets */,
+				E8E1D9BB2A0B8B350014CBE7 /* LaunchScreen.storyboard */,
+				E8E1D9BE2A0B8B350014CBE7 /* Info.plist */,
+>>>>>>> master
 			);
 			path = SimpleTable;
 			sourceTree = "<group>";
@@ -146,8 +158,11 @@
 			files = (
 				E8E1D9B52A0B8B340014CBE7 /* ViewController.swift in Sources */,
 				E8E1D9B12A0B8B340014CBE7 /* AppDelegate.swift in Sources */,
+<<<<<<< HEAD
 				E863CBA82A0B99C30005B77F /* CustomTableViewCell.swift in Sources */,
 				E863CBAA2A0BBC860005B77F /* SecondViewController.swift in Sources */,
+=======
+>>>>>>> master
 				E8E1D9B32A0B8B340014CBE7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

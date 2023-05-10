@@ -7,7 +7,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton:UIButton!
     let cellIdentifier:String = "cell"
+<<<<<<< HEAD
     let customCellIndetifier:String = "customCeel"
+=======
+>>>>>>> master
     let korean:[String] = "가나다라마바사아자차카파타하".map{String($0)}
     let english:[String] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".map{String($0)}
     
@@ -18,6 +21,7 @@ class ViewController: UIViewController {
         self.tableView.dataSource = self
     }
     
+<<<<<<< HEAD
     var dates: [[String]] = []
     let dateFormatter:DateFormatter = {
         let df = DateFormatter()
@@ -27,15 +31,27 @@ class ViewController: UIViewController {
     }()
     let timeFormatter:DateFormatter = {
         let df = DateFormatter()
+=======
+    var dates: [String] = []
+    let dateFormatter:DateFormatter = {
+        let df = DateFormatter()
+        df.dateStyle = .long // 이거 뭐임?
+>>>>>>> master
         df.timeStyle = .long // 이거 뭐임?
         return df
     }()
     
     @IBAction func touchUPAddButton(_ sender: UIButton) {
+<<<<<<< HEAD
         let curDate = Date()
         let tempDate = dateFormatter.string(from: curDate)
         let tempTime = timeFormatter.string(from: curDate)
         dates.append([tempDate, tempTime])
+=======
+        let tempDate = Date()
+        let tempString = dateFormatter.string(from: tempDate)
+        dates.append(tempString)
+>>>>>>> master
         
         self.tableView.reloadSections(IndexSet(2...2), with: .fade)
         //self.tableView.reloadData() //테이블뷰를 다시 불러오는 함수
@@ -65,6 +81,7 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
     }
     //테이블뷰의 셀의 모양을 생성하는 함수이다.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+<<<<<<< HEAD
         if indexPath.section < 2 {
             let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier, for: indexPath)
             let text:String = indexPath.section == 0 ? korean[indexPath.row] : english[indexPath.row]
@@ -80,6 +97,22 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
             cell.rightLabel.text = dates[indexPath.row][1]
             return cell
         }
+=======
+        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier, for: indexPath)
+        var text = ""
+        switch indexPath.section {
+        case 0:
+            text = korean[indexPath.row]
+        case 1:
+            text = english[indexPath.row]
+        case 2:
+            text = dates[indexPath.row]
+        default :
+            text = ""
+        }
+        cell.textLabel?.text = text
+        return cell
+>>>>>>> master
     }
     //섹션의 개수를 설정하는 함수이다.
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -101,6 +134,7 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
     }
     
     
+<<<<<<< HEAD
     // MARK: - Navigation
     //세그는 여러개를 가질 수 있다.
     //그럴 경우 세그의 아이덴티파이어를 통해서 구별하면 된다.
@@ -126,5 +160,7 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
     }
     
     
+=======
+>>>>>>> master
 }
 
