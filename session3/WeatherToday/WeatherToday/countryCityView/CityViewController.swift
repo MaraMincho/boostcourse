@@ -93,7 +93,7 @@ extension CityViewController: UITableViewDelegate, UITableViewDataSource {
         cell.rainyPredictLabel.text = "강수확률 \(cities[indexPath.row].rainfallProbability)%"
         
         cell.weatherForcastImageView.image = UIImage(imageLiteralResourceName: cities[indexPath.row].weatherImageName)
-        //로직 설정 색갈 바꾸는 것 생성
+        
         cell.degreeLabel.textColor = cities[indexPath.row].degreeColor
         cell.rainyPredictLabel.textColor = cities[indexPath.row].rainyLabelColor
 
