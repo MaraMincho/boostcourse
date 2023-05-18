@@ -1,9 +1,4 @@
-//
-//  Friend.swift
-//  MyFriends
-//
-//  Created by 정다함 on 2023/05/10.
-//
+
 
 import Foundation
 
