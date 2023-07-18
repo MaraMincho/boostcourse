@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DA61D2C385D5E51EAD43EC16 /* Pods_MyAlbum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0560C8216E7010C9B8C1828 /* Pods_MyAlbum.framework */; };
+		E8A6D7922A163168002F8D9F /* CustomUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A6D7912A163168002F8D9F /* CustomUICollectionView.swift */; };
+		E8A6D7942A16317B002F8D9F /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A6D7932A16317B002F8D9F /* CustomCollectionViewCell.swift */; };
 		E8AA064D2A162BC000E506B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA064C2A162BC000E506B9 /* AppDelegate.swift */; };
 		E8AA064F2A162BC000E506B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA064E2A162BC000E506B9 /* SceneDelegate.swift */; };
 		E8AA06512A162BC000E506B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA06502A162BC000E506B9 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 		4F87F150777A74458C68842D /* Pods-MyAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAlbum.release.xcconfig"; path = "Target Support Files/Pods-MyAlbum/Pods-MyAlbum.release.xcconfig"; sourceTree = "<group>"; };
 		940A55A5298928F6F3EDEF72 /* Pods-MyAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAlbum.debug.xcconfig"; path = "Target Support Files/Pods-MyAlbum/Pods-MyAlbum.debug.xcconfig"; sourceTree = "<group>"; };
 		C0560C8216E7010C9B8C1828 /* Pods_MyAlbum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAlbum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8A6D7912A163168002F8D9F /* CustomUICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUICollectionView.swift; sourceTree = "<group>"; };
+		E8A6D7932A16317B002F8D9F /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		E8AA06492A162BC000E506B9 /* MyAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8AA064C2A162BC000E506B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8AA064E2A162BC000E506B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,8 +58,24 @@
 				940A55A5298928F6F3EDEF72 /* Pods-MyAlbum.debug.xcconfig */,
 				4F87F150777A74458C68842D /* Pods-MyAlbum.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E8A6D78F2A1630E5002F8D9F /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E8AA06502A162BC000E506B9 /* ViewController.swift */,
+				E8A6D7912A163168002F8D9F /* CustomUICollectionView.swift */,
+				E8A6D7932A16317B002F8D9F /* CustomCollectionViewCell.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		E8A6D7902A1630FA002F8D9F /* FolderItemPreviewScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FolderItemPreviewScreen;
 			sourceTree = "<group>";
 		};
 		E8AA06402A162BC000E506B9 = {
@@ -79,9 +99,10 @@
 		E8AA064B2A162BC000E506B9 /* MyAlbum */ = {
 			isa = PBXGroup;
 			children = (
+				E8A6D7902A1630FA002F8D9F /* FolderItemPreviewScreen */,
+				E8A6D78F2A1630E5002F8D9F /* MainScreen */,
 				E8AA064C2A162BC000E506B9 /* AppDelegate.swift */,
 				E8AA064E2A162BC000E506B9 /* SceneDelegate.swift */,
-				E8AA06502A162BC000E506B9 /* ViewController.swift */,
 				E8AA06552A162BC200E506B9 /* Assets.xcassets */,
 				E8AA06572A162BC200E506B9 /* LaunchScreen.storyboard */,
 				E8AA065A2A162BC200E506B9 /* Info.plist */,
@@ -204,8 +225,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8AA06512A162BC000E506B9 /* ViewController.swift in Sources */,
+				E8A6D7942A16317B002F8D9F /* CustomCollectionViewCell.swift in Sources */,
 				E8AA064D2A162BC000E506B9 /* AppDelegate.swift in Sources */,
 				E8AA064F2A162BC000E506B9 /* SceneDelegate.swift in Sources */,
+				E8A6D7922A163168002F8D9F /* CustomUICollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
